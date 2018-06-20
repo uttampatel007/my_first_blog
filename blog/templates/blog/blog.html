@@ -1,0 +1,19 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+  <p>sfhkjc</p>
+  {% for post in object_list %}
+    <div class="list-group">
+      <a href=""/blog/{{post.id}}"" class="list-group-item list-group-item-action">.</a>
+    </div>
+    <div class="container">
+      <ul class="list-group">
+        <li class="list-group-item"><h3>{{ post.date|date:"Y-m-d" }}
+          <a href="/blog/{{post.id}}"> {{post.title}}</a></h3></li>
+      </ul>
+    </div>
+<!--h5>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{post.id}}"> {{post.title}}</a></h5 -->
+
+    <!-- we do not have post_id in  our Post() class @ manage.py but django makes one id column automatically for us in database -->
+  {%endfor%}
+{% endblock %}

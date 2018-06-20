@@ -1,0 +1,17 @@
+{% extends "personal/header.html" %}
+
+{%block content%}
+<div class="container">
+  <h2>Welcome To Official Blog Of Uttam Patel</h2>
+  <p>Try Blog On Django & Python 3. Full responsive blog.</p>
+  {% load staticfiles %}
+  <img src="{% static "personal/img/profile.jpg" %}" class="rounded img-fluid" style="width:50%">
+</div>
+<div class="jumbotron">
+  <p>Welcome To My Website! I am a programmer.</p>
+  {% include 'personal/includes/htmlsnippet.html' %}
+
+
+</div>
+
+{%endblock%}
